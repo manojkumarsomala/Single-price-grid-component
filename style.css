@@ -1,0 +1,144 @@
+
+:root{
+    --primary-Cyan: hsl(179, 62%, 43%);
+    --primary-Bright-Yellow: hsl(71, 73%, 54%);
+    
+    --secondaryLight-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--secondaryLight-Gray);
+    font-size: 14px;
+    color:var(--secondaryLight-Gray);
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    place-items: center;
+    font-family: 'Karla', sans-serif;
+}
+
+.main-grid{
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+   grid-template-rows: auto auto ;
+   text-align: left;
+   max-width: 550px;
+   border-radius: 1.7rem;
+   
+}
+
+
+.flex-group{
+    display: flex ;
+    gap:1rem;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem;
+}
+
+ /* first-box */
+.community{
+    background-color: hsl(0, 0%, 100%);
+    color: var(--primary-Cyan);
+    padding: 2rem;
+    grid-area: 1 /1 / span 1 /span 2  ;
+}
+
+
+.community h4{
+    color: var(--primary-Bright-Yellow);
+}
+.community p{
+    line-height: 1.6;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+}
+ 
+
+/* second box  */
+
+.Monthly-Subscription{
+    background-color: hsl(179, 50%, 43%);
+   
+}
+
+.price span{
+    font-size: 2rem;
+    color: white;
+    padding-right: 10px;
+}
+ 
+.Subscription-text{
+    color: hsl(179, 50%, 73%);
+    padding-top: 0.4rem;
+}
+
+.price {
+    color: hsl(179, 50%, 63%);
+    font-weight: 400;
+}
+
+.sign-up{
+    font-size: 1rem;
+    display: inline-block;
+    background-color: var(--primary-Bright-Yellow);
+    padding: 0.8rem;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    font-family: 'Karla', sans-serif;
+}
+
+
+ /* third box */
+
+
+
+.promotion {
+    background-color: var(--primary-Cyan);
+}
+  
+.paragraphs{
+      display: flex;  
+      flex-direction: column; 
+      gap: 2px;   
+}
+
+.paragraphs p{
+    color: hsl(179, 50%, 83%);
+}
+
+
+@media (max-width:400px) {
+
+     
+    body{
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+
+
+      .main-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 1.8rem;
+      }
+      
+      .community{
+        padding: 0.2rem;
+    }
+    
+    .flex-group{
+        padding: 1.5rem;
+    }
+
+}
